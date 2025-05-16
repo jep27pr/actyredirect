@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirect app</title>
+  <script>
+    const ua = navigator.userAgent.toLowerCase();
+
+    if (/android/.test(ua)) {
+      // Android → Google Play
+      window.location.href = "https://play.google.com/store/apps/details?id=com.acty.client";
+    } else if (/iphone|ipad|ipod/.test(ua)) {
+      // iOS → App Store
+      window.location.href = "https://apps.apple.com/it/app/acty/id1126880524";
+    } else {
+      // Fallback (desktop o altro)
+      window.location.href = "https://www.acty.com";
+    }
+  </script>
+</head>
+<body>
+  <p>Reindirizzamento in corso...</p>
+</body>
+</html>
